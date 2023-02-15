@@ -1,0 +1,142 @@
+---
+title: "A ioslides demo"
+subtitle: "FISH 549"
+author: "Jenny Stern <br> SAFS <br> University of Washington"
+date: "2/15/2023"
+output: 
+  ioslides_presentation:
+      css: my-css.css
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# Introduction
+
+## R Markdown
+
+This is an R Markdown presentation. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document.
+
+## Slide with Bullets {.build}
+
+- Bullet 1  
+
+> * Bullet 2
+
+> - Bullet 3
+
+## Slide with R Output
+
+```{r cars, echo = TRUE}
+summary(cars)
+```
+
+## Slide with Plot
+
+```{r pressure, fig.cap = "A plot of pressure.", fig.pos= "align", fig.wedth = 5, fig.height= 3}
+plot(pressure)
+```
+
+## A title | A subtitle
+
+A list of things
+ 
+ - one
+ 
+ -two
+ 
+ ---
+ a slide with no title
+ 
+ ### Highlighted code
+ 
+```{r, echo = TRUE}
+a <- 1
+b <- 2
+### <b>
+a/b
+### </b>
+```
+ 
+ 
+## some equations
+
+A standalone eqn
+
+$$
+y_i = \alpha + \beta x_i + \epsilon_i
+$$
+
+<br>
+
+an inline equation where $\epsilon \sim \text{N} (0, sigma^2)$
+
+## {data-background=img/rmarkdown.png data-background-size=cover}
+
+## {data-background=img/rmarkdown.png data-background-size="50%"}
+
+## A title here {data-background=img/rmarkdown.png data-background-size="50%" data-background-position="0% 50%"}
+
+## A title here {.smaller}
+
+```{r small_code, echo = TRUE}
+## a simple regression model
+fit <- lm(dist ~ speed, data = cars)
+## model summary
+summary(fit)
+```
+
+
+## {.flexbox .vcenter}
+
+centered
+
+## A slide with some centered content
+
+<div class="centered">
+This text is centered
+</div>
+
+This text is not
+
+## Two-column layout 
+
+<div class="columns-2">
+  ![](img/women_in_science.png)
+
+  * A photo collage
+  * of some women in science
+  * featured in SAFS News
+</div>
+
+
+## A slide with colored text
+
+<div class="red2">
+This text is red
+</div>
+
+<div class="blue">
+This text is blue
+</div>
+
+
+## Future Steps {.blue-text .bigger}
+
+This is blue and bigger
+
+## Slide with presenter notes
+
+<div class="notes">
+Here are my notes for this slide:
+
+* mention optional notes
+
+* don't forget to exit
+</div>
+
+This slide has some notes, but they're hidden from view
+
